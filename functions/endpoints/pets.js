@@ -48,6 +48,7 @@ app.get('/read', (req, res) => {
                 let docs = querySnapshot.docs;
                 for (let doc of docs) {
                     const selectedpet = {
+                        id: doc.id,
                         name: doc.data().name,
                         age: doc.data().age,
                         description: doc.data().description
